@@ -1,6 +1,6 @@
 # 🌏 LANGUAGE ASSISTANT - TRỢ LÝ NGÔN NGỮ
 
-![alt text](image.png)
+# LINK DEPLOY: https://language-assistant-2.onrender.com/
 
 ## 📝 Giới thiệu
 

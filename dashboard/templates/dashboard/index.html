@@ -11,6 +11,20 @@
 {% block content %}
 
 
+    {% if user.is_authenticated %}
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="section-title bg-white text-start pe-3">Welcome back {{ user.username }}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    {% endif %}
+                    
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-4">
@@ -208,7 +222,7 @@
                 <div class="col-lg-3 col-md-6  text-center">
                     <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
 
-                        <img src="{% static 'dashboard/img/cat1.png' %}" class="img-fluid" alt="categories"></i>
+                        <img src="{% static 'dashboard/img/listen.png' %}" class="img-fluid" alt="categories"></i>
 
                         <h5 class="my-2">
                             <a href="#" class="text-center"> Listening</a>
@@ -218,7 +232,7 @@
                 <div class="col-lg-3 col-md-6  text-center">
                     <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
 
-                        <img src="{% static 'dashboard/img/cat2.png' %}" class="img-fluid" alt="categories"></i>
+                        <img src="{% static 'dashboard/img/speak.png' %}" class="img-fluid" alt="categories"></i>
 
                         <h5 class="my-2">
                             <a href="#" class="text-center"> Speaking</a>
@@ -228,7 +242,7 @@
                 <div class="col-lg-3 col-md-6  text-center">
                     <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
 
-                        <img src="{% static 'dashboard/img/cat3.png' %}" class="img-fluid" alt="categories"></i>
+                        <img src="{% static 'dashboard/img/read.png' %}" class="img-fluid" alt="categories"></i>
 
                         <h5 class="my-2">
                             <a href="#" class="text-center"> Reading</a>
@@ -238,7 +252,7 @@
                 <div class="col-lg-3 col-md-6  text-center">
                     <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
 
-                        <img src="{% static 'dashboard/img/cat4.png' %}" class="img-fluid" alt="categories"></i>
+                        <img src="{% static 'dashboard/img/write.png' %}" class="img-fluid" alt="categories"></i>
 
                         <h5 class="my-2">
                             <a href="#" class="text-center"> Writing</a>
@@ -302,14 +316,14 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-1.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (1).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
                                 class="px-2 py-1 fw-bold text-uppercase">FREE</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1"><a href="" class="text-dark">HTML Course for Beginners </a></h5>
+                            <h5 class="mb-1"><a href="" class="text-dark">TOEIC Course for Beginners </a></h5>
                         </div>
                         <div class="d-flex">
                             <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
@@ -332,14 +346,14 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-2.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (2).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0ed44c;"
                                 class="px-2 py-1 fw-bold text-uppercase">PAID</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">Front End Development-CSS
+                            <h5 class="mb-1">IELTS Course for Beginners
                             </h5>
                         </div>
                         <div class="d-flex">
@@ -363,14 +377,14 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-3.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (3).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
                                 class="px-2 py-1 fw-bold text-uppercase">FREE</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">Introduction to JavaScript
+                            <h5 class="mb-1">TOEFL Course for Beginners
                             </h5>
                         </div>
                         <div class="d-flex">
@@ -394,14 +408,14 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-4.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (4).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0ed44c;"
                                 class="px-2 py-1 fw-bold text-uppercase">PAID</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">Python Programming
+                            <h5 class="mb-1">Listening Course for Beginners
                             </h5>
                         </div>
                         <div class="d-flex">
@@ -425,14 +439,14 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-5.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (5).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
                                 class="px-2 py-1 fw-bold text-uppercase">FREE</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">SQL for Data Science
+                            <h5 class="mb-1">Writing Course for Beginners
                             </h5>
                         </div>
                         <div class="d-flex">
@@ -456,14 +470,14 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-6.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (6).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
                                 class="px-2 py-1 fw-bold text-uppercase">FREE</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">ChatGPT for Beginners
+                            <h5 class="mb-1">Speaking Course for Beginners
                             </h5>
                         </div>
                         <div class="d-flex">
@@ -487,14 +501,14 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-7.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (7).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
                                 class="px-2 py-1 fw-bold text-uppercase">FREE</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">AWS for Beginners
+                            <h5 class="mb-1">Reading Course for Beginners
                             </h5>
                         </div>
                         <div class="d-flex">
@@ -518,14 +532,14 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-8.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (8).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0ed44c;"
                                 class="px-2 py-1 fw-bold text-uppercase">PAID</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">Microsoft Azure Essentials
+                            <h5 class="mb-1">TEST Course for Beginners
                             </h5>
                         </div>
                         <div class="d-flex">
@@ -549,14 +563,14 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-9.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (9).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
                                 class="px-2 py-1 fw-bold text-uppercase">FREE</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">Introduction to MS Excel</h5>
+                            <h5 class="mb-1">Introduction to English</h5>
                         </div>
                         <div class="d-flex">
                             <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
@@ -579,14 +593,15 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-10.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (10).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0ed44c;"
                                 class="px-2 py-1 fw-bold text-uppercase">PAID</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">Statistics For Data Science
+                            <h5 class="mb-1">
+                                Introduction to English Grammar
                             
                                 
                             </h5>
@@ -612,14 +627,15 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-11.jpg' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (11).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
                                 class="px-2 py-1 fw-bold text-uppercase">FREE</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">Java Programming
+                            <h5 class="mb-1">
+                                Introduction to English Vocabulary
                             </h5>
                         </div>
                         <div class="d-flex">
@@ -643,14 +659,15 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="{% static 'dashboard/img/course-12.png' %}" alt="">
+                            <img class="img-fluid" src="{% static 'dashboard/img/imgcourse (12).jpg' %}" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
                                 class="px-2 py-1 fw-bold text-uppercase">FREE</div>
 
                         </div>
                         <div class="p-2 pb-0">
 
-                            <h5 class="mb-1">C for Beginners
+                            <h5 class="mb-1">
+                                Introduction to English Pronunciation
                             </h5>
                         </div>
                         <div class="d-flex">

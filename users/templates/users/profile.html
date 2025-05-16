@@ -93,9 +93,96 @@
                     <a href="{% url 'dictionary:dictionary' %}" class="btn btn-info mb-2">
                         <i class="fas fa-book me-2"></i>Dictionary
                     </a>
+                    <a href="#" class="btn btn-info mb-2">
+                        <i class="fas fa-book me-2"></i>Course enrolleded
+                    </a>
                    
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <div class="row g-5">
+            <!-- Biểu đồ tiến trình học (vòng tròn) -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start pe-3">Learning Progress</h6>
+                <canvas id="progressChart" width="100" height="100"></canvas>
+            </div>
+
+            <!-- Biểu đồ thời gian học mỗi ngày (cột) -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <h6 class="section-title bg-white text-start pe-3">Daily Study Time</h6>
+                <canvas id="dailyChart" width="200" height="100"></canvas>
+            </div>
+        </div>
+
+        <style>
+            #progressChart {
+                width: 300px !important;
+                height: 300px !important;
+            }
+            #dailyChart {
+                width: 100% !important;
+                max-width: 500px;
+                height: 300px !important;
+            }
+        </style>
+
+                <!-- Chart.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            // Biểu đồ tròn: tiến trình học
+            const ctx1 = document.getElementById('progressChart').getContext('2d');
+            new Chart(ctx1, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Completed', 'Remaining'],
+                    datasets: [{
+                        data: [70, 30], // 70% đã học
+                        backgroundColor: ['#00CC00', '#e0e0e0'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    cutout: '70%',
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+
+            // Biểu đồ cột: thời gian học mỗi ngày
+            const ctx2 = document.getElementById('dailyChart').getContext('2d');
+            new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Hours Learned',
+                        data: [1.5, 2, 0.5, 3, 2.5, 1, 0], // Dữ liệu giả
+                        backgroundColor: '#00CC00'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Hours'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        </script>       
+
+
     </div>
 {% endblock %}
